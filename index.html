@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViktorDisevicAssigment4/1</title>
+    <style>
+        /* 1. Tekst svih linkova koji upućuju na sajt Google u zeleno */
+        a[href*="google"] {
+            color: green;
+        }
+
+        /* 2. Tekst linka koji upućuje na LINK group u crveno */
+        a[href*="linkgroup"] {
+            color: red;
+        }
+
+        /* 3. Paragrafe unutar second-div elementa naizmenično obojiti u crvenu i plavu boju */
+        #second-div p:nth-of-type(odd) {
+            color: red;
+        }
+        #second-div p:nth-of-type(even) {
+            color: blue;
+        }
+
+        /* 4. Na krajeve Paragrafa 2 i Paragrafa 3 dodati tekst – NEW, žute boje */
+        p:nth-of-type(2)::after,
+        p:nth-of-type(3)::after {
+            content: " – NEW";
+            color: yellow;
+        }
+
+        /* 5. Prilikom prelaska miša preko Paragraph 10 elementa, njegov tekst treba da postane italic */
+        p:nth-of-type(10):hover {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="first-div">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+    </div>
+    <div id="second-div">
+        <p>Paragraph 4</p>
+        <p>Paragraph 5</p>
+        <p>Paragraph 6</p>
+        <p>Paragraph 7</p>
+        <p>Paragraph 8</p>
+        <p>Paragraph 9</p>
+        <p>Paragraph 10</p>
+    </div>
+    <a href="https://www.google.com">Google Link</a>
+    <a href="https://www.linkgroup.rs">LINK group</a>
+    <a href="https://mail.google.com">Gmail Link</a>
+</body>
+</html>
